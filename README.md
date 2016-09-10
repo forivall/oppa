@@ -1,15 +1,15 @@
-# $NAME
+# oppa
 
-$DESCRIPTION
+Operator Precedence Parser for Arithmetic
 
-[![build status](https://secure.travis-ci.org/forivall/$NAME.svg)](http://travis-ci.org/forivall/$NAME)
-[![dependency status](https://david-dm.org/forivall/$NAME.svg)](https://david-dm.org/forivall/$NAME)
-[![coverage status](https://coveralls.io/repos/github/forivall/$NAME/badge.svg)](https://coveralls.io/github/forivall/$NAME)
+[![build status](https://secure.travis-ci.org/forivall/oppa.svg)](http://travis-ci.org/forivall/oppa)
+[![dependency status](https://david-dm.org/forivall/oppa.svg)](https://david-dm.org/forivall/oppa)
+[![coverage status](https://coveralls.io/repos/github/forivall/oppa/badge.svg)](https://coveralls.io/github/forivall/oppa)
 
 ## Installation
 
 ```
-npm install --save $NAME
+npm install --save oppa
 ```
 
 ## Usage

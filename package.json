@@ -1,16 +1,16 @@
 {
-  "name": "$NAME",
+  "name": "oppa",
   "version": "0.0.0",
-  "description": "$DESCRIPTION",
+  "description": "Operator Precedence Parser for Arithmetic",
   "license": "ISC",
   "author": "Jordan Klassen <forivall@gmail.com>",
-  "homepage": "https://github.com/forivall/$NAME",
+  "homepage": "https://github.com/forivall/oppa",
   "repository": {
     "type": "git",
-    "url": "git@github.com:forivall/$NAME.git"
+    "url": "git@github.com:forivall/oppa.git"
   },
   "bugs": {
-    "url": "https://github.com/forivall/$NAME/issues"
+    "url": "https://github.com/forivall/oppa/issues"
   },
   "scripts": {
     "lint": "xo",

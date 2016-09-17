@@ -30,23 +30,50 @@
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-runtime": "^6.11.6"
+  },
   "devDependencies": {
     "ava": "^0.16.0",
     "babel-cli": "^6.5.1",
+    "babel-plugin-object-rest-spread": "0.0.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.5.0",
     "coveralls": "^2.11.12",
     "eslint-config-mxo": "^0.2.0",
     "jsinspect": "^0.8.0",
+    "json5": "^0.5.0",
     "nyc": "^8.1.0",
+    "rus-diff": "^1.1.0",
     "xo": "^0.16.0"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015",
+      "flow"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-runtime"
+    ]
   },
   "xo": {
     "extends": [
       "mxo/esnext"
+    ],
+    "rules": {
+      "no-labels": 0
+    },
+    "overrides": [
+      {
+        "files": "test/**.test.js",
+        "extends": [
+          "mxo/ava"
+        ]
+      }
+    ],
+    "ignores": [
+      "lib/**"
     ]
   }
 }

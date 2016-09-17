@@ -470,7 +470,7 @@ export default class Tokenizer {
     let val;
     if (isFloat) {
       val = parseFloat(str);
-    } else if (str.length === 1) {
+    } else {
       val = parseInt(str, 10);
     }
     return this.finishToken(tt.num, val);

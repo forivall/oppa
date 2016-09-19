@@ -3,12 +3,12 @@
 
 // TODO: rename this file to "shell-tokenizer"
 
-import type {TokenType} from './types';
-
 import {isIdentifierStart, isIdentifierChar} from '../util/identifier';
+import {lineBreak, nonASCIIwhitespace} from '../util/whitespace';
+
+import type {TokenType} from './types';
 // eslint-disable-next-line no-duplicate-imports
 import {types as tt, keywords as keywordTypes} from './types';
-import {lineBreak, nonASCIIwhitespace} from '../util/whitespace';
 
 // Object type used to represent tokens. Note that normally, tokens
 // simply exist as properties on the parser's state object. This is only

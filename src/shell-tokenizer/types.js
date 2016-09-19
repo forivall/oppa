@@ -7,9 +7,9 @@
 export class TokenType {
   constructor(label, conf = {}) {
     this.label = label;
-    this.isAssign = !!conf.isAssign;
-    this.prefix = !!conf.prefix;
-    this.postfix = !!conf.postfix;
+    this.isAssign = Boolean(conf.isAssign);
+    this.prefix = Boolean(conf.prefix);
+    this.postfix = Boolean(conf.postfix);
     this.binop = conf.binop || null;
   }
 }
@@ -17,13 +17,13 @@ export class TokenType {
 function binop(name, prec, conf = {}) {
   return new TokenType(name, {binop: prec, ...conf});
 }
-const beforeExpr = {beforeExpr: true}, startsExpr = {startsExpr: true};
+const startsExpr = {startsExpr: true};
 
 export const types = {
-  num: new TokenType("num", startsExpr),
-  string: new TokenType("string", startsExpr),
-  name: new TokenType("name", startsExpr),
-  eof: new TokenType("eof"),
+  num: new TokenType('num', startsExpr),
+  string: new TokenType('string', startsExpr),
+  name: new TokenType('name', startsExpr),
+  eof: new TokenType('eof'),
 
   // Operators. These carry several kinds of properties to help the
   // parser use them properly (the presence of these properties is
@@ -39,20 +39,20 @@ export const types = {
   // binary operators with a very low precedence, that should result
   // in AssignmentExpression nodes.
 
-  eq: new TokenType("=", {isAssign: true}),
-  assign: new TokenType("_=", {isAssign: true}),
-  incDec: new TokenType("++/--", {prefix: true, postfix: true}),
-  prefix: new TokenType("prefix", {prefix: true}),
-  logicalOR: binop("||", 1),
-  logicalAND: binop("&&", 2),
-  bitwiseOR: binop("|", 3),
-  bitwiseXOR: binop("^", 4),
-  bitwiseAND: binop("&", 5),
-  equality: binop("==/!=", 6),
-  relational: binop("</>", 7),
-  bitShift: binop("<</>>", 8),
-  plusMin: binop("+/-", 9, {prefix: true}),
-  modulo: binop("%", 10),
-  star: binop("*", 10),
-  slash: binop("/", 10),
+  eq: new TokenType('=', {isAssign: true}),
+  assign: new TokenType('_=', {isAssign: true}),
+  incDec: new TokenType('++/--', {prefix: true, postfix: true}),
+  prefix: new TokenType('prefix', {prefix: true}),
+  logicalOR: binop('||', 1),
+  logicalAND: binop('&&', 2),
+  bitwiseOR: binop('|', 3),
+  bitwiseXOR: binop('^', 4),
+  bitwiseAND: binop('&', 5),
+  equality: binop('==/!=', 6),
+  relational: binop('</>', 7),
+  bitShift: binop('<</>>', 8),
+  plusMin: binop('+/-', 9, {prefix: true}),
+  modulo: binop('%', 10),
+  star: binop('*', 10),
+  slash: binop('/', 10),
 };

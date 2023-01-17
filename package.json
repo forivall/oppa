@@ -34,7 +34,7 @@
     "babel-runtime": "^6.11.6"
   },
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^5.1.1",
     "babel-cli": "^6.5.1",
     "babel-plugin-object-rest-spread": "0.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
